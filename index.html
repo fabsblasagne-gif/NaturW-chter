@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NaturWächter – Gemeinsam für die Natur.">
+    <title>🌿 NaturWächter – Gemeinsam für die Natur</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+        body { font-family: Arial, sans-serif; background: #06130d; color: white; overflow-x: hidden; }
+        body::before { content: ""; position: fixed; width: 600px; height: 600px; background: #00ff8840; filter: blur(150px); border-radius: 50%; top: -200px; left: -200px; z-index: -1; }
+        nav { position: fixed; top: 0; width: 100%; padding: 20px 8%; display: flex; justify-content: space-between; align-items: center; background: #06130dcc; backdrop-filter: blur(15px); border-bottom: 1px solid #00ff8830; z-index: 1000; }
+        .logo { font-size: 24px; font-weight: bold; color: #39ff9a; }
+        nav a { color: white; text-decoration: none; margin-left: 25px; transition: .3s; }
+        nav a:hover { color: #39ff9a; }
+        .hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 120px 20px 50px; background: linear-gradient(#06130d99, #06130d), url("https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=2000&q=80") center/cover; }
+        .hero-content { max-width: 850px; animation: fadeIn 1.5s ease; }
+        .hero h1 { font-size: clamp(45px, 8vw, 90px); margin-bottom: 20px; text-shadow: 0 0 30px #00ff88; }
+        .hero h1 span, .section-title span { color: #39ff9a; }
+        .hero p { font-size: 21px; color: #d5ffe6; margin-bottom: 35px; }
+        .button { display: inline-block; padding: 15px 30px; margin: 8px; border-radius: 30px; background: #39ff9a; color: #06130d; font-weight: bold; text-decoration: none; transition: .3s; box-shadow: 0 0 20px #39ff9a80; }
+        .button:hover { transform: translateY(-5px) scale(1.05); box-shadow: 0 0 40px #39ff9a; }
+        .button.secondary { background: transparent; color: white; border: 2px solid #39ff9a; }
+        section { padding: 100px 8%; }
+        .section-title { text-align: center; font-size: 45px; margin-bottom: 20px; }
+        .section-text { text-align: center; max-width: 700px; margin: 0 auto 50px; color: #b9d9c5; font-size: 18px; }
+        .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 25px; }
+        .card { background: #0b2116; border: 1px solid #39ff9a30; border-radius: 20px; padding: 30px; text-align: center; transition: .4s; }
+        .card:hover { transform: translateY(-10px); border-color: #39ff9a; box-shadow: 0 0 30px #39ff9a30; }
+        .card .emoji { font-size: 55px; margin-bottom: 20px; }
+        .card h3 { font-size: 25px; margin-bottom: 15px; color: #39ff9a; }
+        .card p { color: #b9d9c5; line-height: 1.6; }
+        .animals { background: #081a11; }
+        .animal { overflow: hidden; padding: 0; }
+        .animal img { width: 100%; height: 220px; object-fit: cover; transition: .5s; }
+        .animal:hover img { transform: scale(1.1); }
+        .animal-content { padding: 25px; }
+        .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 25px; text-align: center; }
+        .stat { padding: 30px; }
+        .stat-number { font-size: 50px; font-weight: bold; color: #39ff9a; text-shadow: 0 0 20px #39ff9a; }
+        .stat p { color: #b9d9c5; margin-top: 10px; }
+        .action { text-align: center; background: linear-gradient(#06130dd9, #06130d), url("https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=2000&q=80") center/cover; border-top: 1px solid #39ff9a30; border-bottom: 1px solid #39ff9a30; }
+        .action h2 { font-size: 50px; margin-bottom: 20px; }
+        .action p { max-width: 650px; margin: auto; color: #d5ffe6; font-size: 18px; line-height: 1.7; }
+        footer { text-align: center; padding: 40px 20px; background: #030b07; color: #8fb19b; }
+        footer strong { color: #39ff9a; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        .leaf { position: fixed; font-size: 25px; animation: fall linear infinite; opacity: .5; pointer-events: none; z-index: 2000; }
+        @keyframes fall { from { transform: translateY(-100px) rotate(0deg); } to { transform: translateY(110vh) rotate(360deg); } }
+        @media (max-width: 700px) { nav { padding: 15px; } nav .links { display: none; } section { padding: 70px 5%; } }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">🌿 NaturWächter</div>
+        <div class="links"><a href="#start">Start</a><a href="#schutz">Naturschutz</a><a href="#tiere">Tiere</a><a href="#mitmachen">Mitmachen</a></div>
+    </nav>
+
+    <section class="hero" id="start"><div class="hero-content">
+        <h1>Schütze die <span>Natur.</span></h1>
+        <p>Gemeinsam können wir Wälder, Tiere, Flüsse und unsere wunderschöne Erde schützen. 🌍</p>
+        <a href="#schutz" class="button">🌱 Entdecke mehr</a><a href="#mitmachen" class="button secondary">💚 Mitmachen</a>
+    </div></section>
+
+    <section id="schutz">
+        <h2 class="section-title">Warum ist <span>Naturschutz</span> wichtig?</h2>
+        <p class="section-text">Die Natur ist unser Zuhause. Viele Tiere und Pflanzen brauchen unsere Hilfe, damit ihre Lebensräume erhalten bleiben.</p>
+        <div class="cards">
+            <div class="card"><div class="emoji">🌳</div><h3>Wälder</h3><p>Wälder bieten Lebensraum für Tiere und Pflanzen und helfen dabei, Kohlenstoff zu speichern.</p></div>
+            <div class="card"><div class="emoji">🦊</div><h3>Tiere</h3><p>Viele Tierarten brauchen geschützte Lebensräume, sauberes Wasser und genügend Nahrung.</p></div>
+            <div class="card"><div class="emoji">💧</div><h3>Wasser</h3><p>Saubere Flüsse, Seen und Meere sind für Menschen, Tiere und Pflanzen lebenswichtig.</p></div>
+            <div class="card"><div class="emoji">🌎</div><h3>Unser Planet</h3><p>Jeder Mensch kann mit kleinen Veränderungen etwas zum Schutz unserer Umwelt beitragen.</p></div>
+        </div>
+    </section>
+
+    <section class="animals" id="tiere">
+        <h2 class="section-title">🐾 Tiere <span>schützen</span></h2>
+        <p class="section-text">Unsere heimischen Tiere brauchen sichere Lebensräume.</p>
+        <div class="cards">
+            <div class="card animal"><img src="https://images.unsplash.com/photo-1516934024742-b461fba47600?auto=format&fit=crop&w=900&q=80" alt="Fuchs"><div class="animal-content"><h3>🦊 Fuchs</h3><p>Füchse leben in Wäldern, Feldern und manchmal sogar mitten in Städten.</p></div></div>
+            <div class="card animal"><img src="https://images.unsplash.com/photo-1474511320723-9a56873867b5?auto=format&fit=crop&w=900&q=80" alt="Wildtier"><div class="animal-content"><h3>🦌 Wildtiere</h3><p>Naturnahe Lebensräume sind wichtig für viele Wildtiere.</p></div></div>
+            <div class="card animal"><img src="https://images.unsplash.com/photo-1444464666168-49d633b86797?auto=format&fit=crop&w=900&q=80" alt="Vogel"><div class="animal-content"><h3>🐦 Vögel</h3><p>Hecken, Bäume und naturnahe Gärten bieten Vögeln Nahrung und Nistplätze.</p></div></div>
+        </div>
+    </section>
+
+    <section><h2 class="section-title">🌍 Gemeinsam <span>helfen</span></h2><div class="stats">
+        <div class="stat"><div class="stat-number">🌳</div><p>Wälder schützen</p></div><div class="stat"><div class="stat-number">🐝</div><p>Insekten helfen</p></div><div class="stat"><div class="stat-number">💧</div><p>Wasser sauber halten</p></div><div class="stat"><div class="stat-number">♻️</div><p>Weniger Müll</p></div>
+    </div></section>
+
+    <section class="action" id="mitmachen"><h2>🌱 Mach mit!</h2><p>Naturschutz beginnt bei kleinen Dingen. Pflanze einen Baum, sammle Müll im Park, spare Wasser oder baue ein Insektenhotel. Jeder Beitrag zählt!</p><br><a href="#start" class="button">💚 Ich bin dabei!</a></section>
+    <footer><p>🌿 <strong>NaturWächter</strong></p><p>Gemeinsam für eine grünere Zukunft. 🌍</p><br><small>© 2026 NaturWächter</small></footer>
+
+    <script>
+        function createLeaf() {
+            const leaf = document.createElement('div');
+            leaf.className = 'leaf'; leaf.innerHTML = '🍃';
+            leaf.style.left = Math.random() * 100 + 'vw';
+            leaf.style.animationDuration = (5 + Math.random() * 7) + 's';
+            leaf.style.fontSize = (15 + Math.random() * 20) + 'px';
+            document.body.appendChild(leaf);
+            setTimeout(() => leaf.remove(), 12000);
+        }
+        setInterval(createLeaf, 900);
+    </script>
+</body>
+</html>
